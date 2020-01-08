@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700');
+
+$blue: #0014dd;
+
+h1 {
+  font-family: Poppins;
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 1.41;
+  color: #0014dd;
+}
+
+h4 {
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 2.25;
+  color: #0014dd;
+}
+
+h5 {
+  font-family: Poppins;
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 1.5;
+  color: #0014dd;
+  margin: 10px 0;
+}
+
+.number {
+  font-weight: bold;
+}
+
+.experiment {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  &-approved {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    &-content {
+      display: flex;
+      flex-direction: column;
+      width: 75%;
+      @media (max-width: 1390px) {
+        width: 66.6%;
+      }
+      @media (max-width: 1090px) {
+        width: 50%;
+      }
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+      .welcome {
+        display: flex;
+        height: 80px;
+      }
+      .list-section {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        &-content {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          width: 100%;
+        }
+      }
+    }
+    .recipe {
+      &-opened {
+        top: auto;
+      }
+      &-closed {
+        top: 130vh;
+      }
+    }
+    &-recipe {
+      display: flex;
+      width: 280px;
+      height: 530px;
+      margin: 0 auto;
+      margin-top: 50px;
+      z-index: 1;
+      @media (max-width: 768px) {
+        position: fixed;
+        bottom: 0;
+        margin: auto;
+      }
+      .recipes {
+        position: relative;
+        overflow: hidden;
+        padding: 32px 18px 0;
+        background-image: url('../../assets/images/recipes/letter.png');
+        &-fixed {
+          position: fixed;
+          top: 0;
+          width: 242px;
+          @media (max-width: 768px) {
+            position: relative;
+            width: 100%;
+          }
+        }
+        &-success {
+          text-align: center;
+          line-height: 87px;
+          color: $blue;
+          display: none;
+        }
+        &-chevron {
+          display: none;
+          position: absolute;
+          top: 7px;
+          right: 0;
+          left: 0;
+          margin: auto;
+          width: 100%;
+          text-align: center;
+          height: 21px;
+          color: #0014dd;
+          font-size: 20px;
+          cursor: pointer;
+          @media (max-width: 768px) {
+            display: block;
+          }
+        }
+        .arrowUp {
+          transform: rotate(180deg);
+        }
+        &-hello {
+          font-family: Poppins;
+          font-weight: bold;
+          font-size: 16px;
+          color: $blue;
+          margin: 10px 0;
+        }
+        &-total {
+          font-family: Poppins;
+          padding-right: 16px;
+          font-weight: 300;
+          font-size: 14px;
+          color: $blue;
+          text-align: right;
+          margin: 9px 0;
+          span {
+            font-weight: 700;
+          }
+        }
+        &-separator {
+          display: block;
+          width: 99%;
+          border: 1px dashed #0014dd;
+          margin-top: 40px;
+          margin-bottom: 30px;
+        }
+        &-list {
+          padding: 0;
+          width: 90%;
+          margin-top: 32px;
+          padding-right: 0;
+          &.add-scroll {
+            height: 160px;
+            overflow-x: hidden;
+            overflow-y: scroll;
+            width: 97%;
+            padding-right: 10px;
+            &::-webkit-scrollbar {
+              width: 4px;
+            }
+      
+            /* Track */
+            &::-webkit-scrollbar-track {
+              background-color: #f3f3f3;
+            }
+      
+            /* Handle */
+            &::-webkit-scrollbar-thumb {
+              background-color: #b9bdea;
+              border-radius: 40px
+            }
+      
+            /* Handle on hover */
+            &::-webkit-scrollbar-thumb:hover {
+              background-color: $blue; 
+            }
+          }
+          li {
+            font-family: "Poppins";
+            font-size: 14px;
+            font-weight: 300;
+            color: $blue;
+            line-height: 22px;
+            padding-bottom: 6px;
+            margin-top: 9px;
+            border-bottom: 1px dashed #979797;
+          }
+        }
+        &-form {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 80px;
+          .btn-checkout {
+            width: 136px;
+            height: 40px;
+            border-radius: 24px;
+            color: white;
+            font-family: Poppins;
+            font-size: 12px;
+            font-weight: 600;
+            text-align: center;
+            background-color: #0014dd;
+            outline: none;
+          }
+          .btn-checkout:disabled {
+            font-weight: normal;
+            background-color: #4c57c5;
+          }
+        }
+        &-letter {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          z-index: -1;
+          right: 0;
+          margin: auto;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+  &-all-list {
+    display: flex;
+    flex-direction: column;
+    .text {
+      margin: 40px 0;
+    }
+    .list-content {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+}

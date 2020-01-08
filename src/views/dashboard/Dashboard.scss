@@ -1,0 +1,30 @@
+.main {
+  display: flex;
+  width: 1440px;
+  margin: auto;
+
+  @media (max-width: 1440px) {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+
+.content {
+  display: flex;
+  left: 80px;
+  flex-direction: column;
+  background: hsla(240, 7%, 81%, 0.15);
+  position: relative;
+  float: right;
+  width: calc(100% - 80px);
+  @media (max-width: 1024px) {
+    width: 100%;
+    left: 0;
+  }
+  .main-panel {
+    background-image: linear-gradient(178deg, rgba(250, 239, 255, 0), #f3daff),
+      linear-gradient(to top, rgba(249, 238, 255, 0), #faeeff);
+    padding: 55px;
+  }
+}

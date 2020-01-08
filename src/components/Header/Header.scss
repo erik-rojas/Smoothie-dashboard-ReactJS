@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700');
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 80px;
+  align-items: center;
+  background: white;
+  &-menu {
+    display: none;
+    width: 100px;
+    min-width: 70px;
+    height: 100%;
+    border-right: .5px solid rgba(116,90,90,.2);
+    @media (max-width: 1024px) {
+      display: flex;
+    }
+    .btn-menu {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      cursor: pointer;
+    }
+  }
+  &-search {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    &-icon {
+      display: flex;
+      width: 55px;
+      height: 32px;
+      margin-left: 8px;
+      svg {
+        width: 20px;
+        fill: #979797;
+        margin: auto;
+      }
+    }
+    &-input {
+      display: flex;
+      width: 100%;
+      .input-field {
+        width: 100%;
+        font-family: Poppins;
+        font-size: 16px;
+        line-height: 2.81;
+        color: #979797;
+        border: none;
+        outline: none;
+        background: transparent;
+        ::placeholder {
+          color: #979797;
+        }
+      }
+    }
+  }
+  &-btn-section {
+    display: flex;
+    align-items: center;
+    margin-right: 2%;
+    .btn-settings-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .btn-settings {
+        border: none;
+        outline: none;
+        background: transparent;
+      }
+    }
+    .btn-user-section {
+      display: flex;
+      margin-left: 30px;
+      .btn-user {
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        color: white;
+        background-color: blue;
+      }
+    }
+  }
+}
+
+.btn-logout {
+  width: 100px;
+  height: 30px;
+  font-size: 15px;
+  border: 0;
+  background-color: transparent;
+  &:hover {
+    color: orange;
+  }
+}

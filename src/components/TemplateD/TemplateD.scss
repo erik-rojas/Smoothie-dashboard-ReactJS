@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700");
+@import url("https://fonts.googleapis.com/css?family=Roboto:700");
+
+$blue: #0014dd;
+
+h3 {
+  margin: 0;
+}
+
+.templateD {
+  display: flex;
+  width: 270px;
+  height: 360px;
+  margin-left: calc((100% - (270 * 4)px) / 8);
+  margin-right: calc((100% - (270 * 4)px) / 8);
+  margin-bottom: 65px;
+  @media (max-width: 1390px) {
+    //270*4+15*8+55*2+80
+    margin-left: calc((100% - (270 * 3)px) / 6);
+    margin-right: calc((100% - (270 * 3)px) / 6);
+  }
+  @media (max-width: 1090px) {
+    //270*3+15*6+55*2+80
+    margin-left: calc((100% - (270 * 2)px) / 4);
+    margin-right: calc((100% - (270 * 2)px) / 4);
+  }
+  @media (max-width: 790px) {
+    //270*2+15*4+55*2+80
+    margin-left: calc((100% - 270px) / 2);
+    margin-right: calc((100% - 270px) / 2);
+  }
+}
+
+.tileD {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-size: cover;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
+  padding: 16px;
+  position: relative;
+  outline: 3px solid transparent;
+  -moz-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  cursor: default;
+  &--bg {
+    &_red {
+      background-image: url("../../assets/images/recipes/red.png");
+    }
+    &_pink {
+      background-image: url("../../assets/images/recipes/pink.png");
+    }
+    &_green {
+      background-image: url("../../assets/images/recipes/green.png");
+    }
+    &_orange {
+      background-image: url("../../assets/images/recipes/orange.png");
+    }
+    &_gray {
+      background-image: url("../../assets/images/recipes/gray.png");
+    }
+    &_blue {
+      background-image: url("../../assets/images/recipes/blue.png");
+    }
+  }
+  &__title {
+    color: $blue;
+    font-family: Poppins;
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 36px;
+  }
+  &__icons {
+    position: absolute;
+    bottom: 6px;
+    right: 9px;
+  }
+  &__group {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 24px;
+    width: 188px;
+  }
+  &__btn {
+    width: 88px;
+    line-height: 24px;
+    text-align: center;
+    border-radius: 12px;
+    background-color: #fff;
+    text-decoration: none;
+    font-size: 8px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $blue;
+    letter-spacing: 0.89px;
+    font-family: Roboto, sans-serif;
+    float: right;
+    pointer-events: none;
+    cursor: default;
+    &--bgc {
+      &_red {
+        background-color: #fdd8dd;
+        float: left;
+      }
+      &_pink {
+        background-color: #f3daff;
+        float: left;
+      }
+      &_green {
+        background-color: #b0efd5;
+        float: left;
+      }
+      &_orange {
+        background-color: #ffeed3;
+        float: left;
+      }
+      &_blue {
+        background-color: #d7defc;
+        float: left;
+      }
+      &_gray {
+        background-color: #e1e7e9;
+        float: left;
+      }
+    }
+  }
+}
