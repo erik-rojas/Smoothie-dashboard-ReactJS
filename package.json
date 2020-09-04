@@ -64,7 +64,7 @@
   },
   "devDependencies": {
     "mini-css-extract-plugin": "^0.4.1",
-    "node-sass": "^4.9.3",
+    "node-sass": "^4.13.1",
     "sass-loader": "^7.1.0"
   }
 }
